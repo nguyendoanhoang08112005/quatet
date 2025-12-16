@@ -1,0 +1,529 @@
+/* ============================
+   TIỆC CUỐI NĂM PAGE - CUSTOM STYLES
+   ============================ */
+
+/* Hero Banner for Tiec Page */
+.tiec-hero {
+    background: linear-gradient(135deg, #1a0a0a 0%, #3a1515 50%, #2a0f0f 100%);
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.tiec-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=1920&q=80') center/cover no-repeat;
+    opacity: 0.25;
+}
+
+.tiec-hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 20% 80%, rgba(255, 215, 0, 0.1), transparent 40%),
+        radial-gradient(circle at 80% 20%, rgba(178, 34, 34, 0.2), transparent 40%);
+}
+
+.tiec-hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.tiec-hero-content {
+    text-align: center;
+    color: white;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.tiec-hero-confetti {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    font-size: 40px;
+    opacity: 0.8;
+    animation: confetti-float 4s ease-in-out infinite;
+}
+
+.tiec-hero-confetti:nth-child(2) {
+    left: auto;
+    right: 10%;
+    animation-delay: 1s;
+}
+
+@keyframes confetti-float {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(15deg);
+    }
+}
+
+.tiec-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(255, 215, 0, 0.1));
+    border: 1px solid var(--gold);
+    padding: 10px 28px;
+    border-radius: 50px;
+    margin-bottom: 28px;
+    backdrop-filter: blur(10px);
+}
+
+.tiec-hero-badge i {
+    color: var(--gold);
+    font-size: 18px;
+}
+
+.tiec-hero-badge span {
+    color: var(--gold);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 12px;
+}
+
+.tiec-hero h1 {
+    font-size: 64px;
+    color: white;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 30px rgba(0, 0, 0, 0.5);
+}
+
+.tiec-hero h1 .gold {
+    color: var(--gold);
+    display: block;
+    font-size: 48px;
+}
+
+.tiec-hero-desc {
+    font-size: 20px;
+    opacity: 0.9;
+    margin-bottom: 40px;
+    line-height: 1.8;
+}
+
+.tiec-hero-cta {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.tiec-hero-highlights {
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+    padding-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tiec-highlight {
+    text-align: center;
+}
+
+.tiec-highlight .number {
+    display: block;
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--gold);
+    font-family: var(--font-heading);
+}
+
+.tiec-highlight .label {
+    font-size: 13px;
+    opacity: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Services Section */
+.tiec-services {
+    padding: 80px 0;
+    background: var(--bg-light);
+}
+
+.tiec-services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.tiec-service-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: 36px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.tiec-service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--gold));
+    transform: scaleX(0);
+    transition: var(--transition);
+}
+
+.tiec-service-card:hover::before {
+    transform: scaleX(1);
+}
+
+.tiec-service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.tiec-service-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 24px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: white;
+}
+
+.tiec-service-card h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+    color: var(--text-dark);
+}
+
+.tiec-service-card p {
+    font-size: 14px;
+    color: var(--text-light);
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.tiec-service-features {
+    text-align: left;
+    margin-bottom: 24px;
+}
+
+.tiec-service-features li {
+    padding: 8px 0;
+    font-size: 13px;
+    color: var(--text-medium);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.tiec-service-features li i {
+    color: var(--gold);
+}
+
+/* Packages Section */
+.tiec-packages {
+    padding: 80px 0;
+}
+
+.tiec-packages-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.tiec-package-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    position: relative;
+}
+
+.tiec-package-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.tiec-package-card.featured {
+    border: 3px solid var(--gold);
+}
+
+.tiec-package-ribbon {
+    position: absolute;
+    top: 20px;
+    right: -35px;
+    background: var(--gold);
+    color: #1a1a1a;
+    padding: 6px 50px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transform: rotate(45deg);
+}
+
+.tiec-package-header {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.tiec-package-header h3 {
+    font-size: 24px;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.tiec-package-header .guests {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.tiec-package-header .price {
+    margin-top: 16px;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--gold);
+}
+
+.tiec-package-header .price span {
+    font-size: 14px;
+    font-weight: 400;
+    opacity: 0.8;
+}
+
+.tiec-package-body {
+    padding: 30px;
+}
+
+.tiec-package-features {
+    margin-bottom: 24px;
+}
+
+.tiec-package-features li {
+    padding: 12px 0;
+    font-size: 14px;
+    color: var(--text-medium);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px dashed var(--border-color);
+}
+
+.tiec-package-features li:last-child {
+    border-bottom: none;
+}
+
+.tiec-package-features li i {
+    width: 24px;
+    height: 24px;
+    background: rgba(178, 34, 34, 0.1);
+    color: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+/* Gallery Section */
+.tiec-gallery {
+    padding: 80px 0;
+    background: var(--bg-light);
+}
+
+.tiec-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.tiec-gallery-item {
+    position: relative;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.tiec-gallery-item:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.tiec-gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    min-height: 200px;
+    transition: var(--transition);
+}
+
+.tiec-gallery-item:nth-child(1) img {
+    min-height: 416px;
+}
+
+.tiec-gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.tiec-gallery-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent 60%);
+    opacity: 0;
+    transition: var(--transition);
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+}
+
+.tiec-gallery-item:hover .tiec-gallery-overlay {
+    opacity: 1;
+}
+
+.tiec-gallery-overlay span {
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* CTA Section */
+.tiec-cta {
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-deeper) 100%);
+    text-align: center;
+    position: relative;
+}
+
+.tiec-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: radial-gradient(rgba(255, 215, 0, 0.1) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+.tiec-cta .container {
+    position: relative;
+    z-index: 1;
+}
+
+.tiec-cta h2 {
+    font-size: 40px;
+    color: white;
+    margin-bottom: 16px;
+}
+
+.tiec-cta h2 .gold {
+    color: var(--gold);
+}
+
+.tiec-cta p {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 32px;
+}
+
+.tiec-cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+
+    .tiec-services-grid,
+    .tiec-packages-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tiec-gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tiec-gallery-item:nth-child(1) {
+        grid-column: span 2;
+    }
+
+    .tiec-hero h1 {
+        font-size: 48px;
+    }
+
+    .tiec-hero h1 .gold {
+        font-size: 36px;
+    }
+
+    .tiec-hero-highlights {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .tiec-services-grid,
+    .tiec-packages-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tiec-hero-highlights {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .tiec-hero-cta {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tiec-cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tiec-hero h1 {
+        font-size: 36px;
+    }
+
+    .tiec-hero h1 .gold {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 576px) {
+    .tiec-gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tiec-gallery-item:nth-child(1) {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    .tiec-gallery-item:nth-child(1) img {
+        min-height: 250px;
+    }
+}

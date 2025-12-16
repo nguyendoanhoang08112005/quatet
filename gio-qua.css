@@ -1,0 +1,477 @@
+/* ============================
+   GIỎ QUÀ PAGE - CUSTOM STYLES
+   ============================ */
+
+/* Hero Banner for Gio Qua Page */
+.gioqua-hero {
+    background: linear-gradient(135deg, #660000 0%, var(--primary) 50%, #8B0000 100%);
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.gioqua-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=1920&q=80') center/cover no-repeat;
+    opacity: 0.15;
+}
+
+.gioqua-hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.gioqua-hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.gioqua-hero-text {
+    color: white;
+}
+
+.gioqua-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 215, 0, 0.2);
+    border: 1px solid var(--gold);
+    padding: 8px 20px;
+    border-radius: 30px;
+    margin-bottom: 24px;
+}
+
+.gioqua-hero-badge i {
+    color: var(--gold);
+}
+
+.gioqua-hero-badge span {
+    color: var(--gold);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+}
+
+.gioqua-hero h1 {
+    font-size: 52px;
+    color: white;
+    margin-bottom: 16px;
+}
+
+.gioqua-hero h1 .gold {
+    color: var(--gold);
+}
+
+.gioqua-hero-desc {
+    font-size: 18px;
+    opacity: 0.9;
+    margin-bottom: 32px;
+    line-height: 1.7;
+}
+
+.gioqua-hero-stats {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 32px;
+}
+
+.gioqua-stat {
+    text-align: center;
+}
+
+.gioqua-stat .number {
+    display: block;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--gold);
+    font-family: var(--font-heading);
+}
+
+.gioqua-stat .label {
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+.gioqua-hero-cta {
+    display: flex;
+    gap: 20px;
+}
+
+.gioqua-hero-image {
+    position: relative;
+}
+
+.gioqua-hero-image img {
+    border-radius: var(--radius-lg);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.gioqua-hero-discount {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 100px;
+    height: 100px;
+    background: var(--gold);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(255, 215, 0, 0.4);
+    animation: pulse-gold 2s ease-in-out infinite;
+}
+
+@keyframes pulse-gold {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.gioqua-hero-discount .text {
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #1a1a1a;
+}
+
+.gioqua-hero-discount .percent {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--primary);
+    line-height: 1;
+}
+
+/* Price Ranges Section */
+.gioqua-ranges {
+    padding: 80px 0;
+    background: var(--bg-light);
+}
+
+.ranges-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.range-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: 32px 24px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.range-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--gold));
+    transform: scaleX(0);
+    transition: var(--transition);
+}
+
+.range-card:hover::before {
+    transform: scaleX(1);
+}
+
+.range-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.range-card.popular {
+    border: 2px solid var(--gold);
+}
+
+.range-card.popular::after {
+    content: 'Best Seller';
+    position: absolute;
+    top: 12px;
+    right: -30px;
+    background: var(--gold);
+    color: #1a1a1a;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 4px 40px;
+    transform: rotate(45deg);
+}
+
+.range-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: white;
+}
+
+.range-card h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: var(--text-dark);
+}
+
+.range-price {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 16px;
+}
+
+.range-features {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.range-features li {
+    padding: 8px 0;
+    font-size: 13px;
+    color: var(--text-medium);
+    border-bottom: 1px dashed var(--border-color);
+}
+
+.range-features li:last-child {
+    border-bottom: none;
+}
+
+/* Products Grid */
+.gioqua-products {
+    padding: 80px 0;
+}
+
+.products-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.products-filters {
+    display: flex;
+    gap: 12px;
+}
+
+.filter-btn {
+    padding: 10px 24px;
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 25px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: white;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.product-item {
+    background: white;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.product-item:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.product-item-img {
+    position: relative;
+    height: 260px;
+    overflow: hidden;
+}
+
+.product-item-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.product-item:hover .product-item-img img {
+    transform: scale(1.1);
+}
+
+.product-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: var(--primary);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.product-badge.hot {
+    background: var(--gold);
+    color: #1a1a1a;
+}
+
+.product-actions {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    right: 12px;
+    display: flex;
+    gap: 8px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: var(--transition);
+}
+
+.product-item:hover .product-actions {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.product-actions .btn {
+    flex: 1;
+}
+
+.product-item-body {
+    padding: 20px;
+}
+
+.product-item-body h4 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-family: var(--font-main);
+    font-weight: 600;
+}
+
+.product-item-body .desc {
+    font-size: 13px;
+    color: var(--text-light);
+    margin-bottom: 12px;
+}
+
+.product-item-price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.product-item-price .current {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.product-item-price .old {
+    font-size: 14px;
+    color: var(--text-light);
+    text-decoration: line-through;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+
+    .products-grid,
+    .ranges-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .gioqua-hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .gioqua-hero-stats {
+        justify-content: center;
+    }
+
+    .gioqua-hero-cta {
+        justify-content: center;
+    }
+
+    .gioqua-hero-image {
+        display: none;
+    }
+
+    .products-grid,
+    .ranges-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .products-header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .gioqua-hero h1 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .ranges-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gioqua-hero-stats {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .gioqua-hero-cta {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gioqua-hero h1 {
+        font-size: 32px;
+    }
+
+    .products-filters {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

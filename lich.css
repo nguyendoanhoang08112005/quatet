@@ -1,0 +1,406 @@
+/* ============================
+   LỊCH PAGE - CUSTOM STYLES
+   ============================ */
+
+/* Hero Banner for Lich Page */
+.lich-hero {
+    background: linear-gradient(135deg, var(--primary-deeper) 0%, var(--primary) 50%, var(--primary-dark) 100%);
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.lich-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://images.unsplash.com/photo-1607344645866-009c320b63e0?w=1920&q=80') center/cover no-repeat;
+    opacity: 0.2;
+}
+
+.lich-hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.lich-hero-content {
+    text-align: center;
+    color: white;
+}
+
+.lich-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 215, 0, 0.2);
+    border: 1px solid var(--gold);
+    padding: 8px 20px;
+    border-radius: 30px;
+    margin-bottom: 24px;
+}
+
+.lich-hero-badge i {
+    color: var(--gold);
+}
+
+.lich-hero-badge span {
+    color: var(--gold);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+}
+
+.lich-hero h1 {
+    font-size: 56px;
+    color: white;
+    margin-bottom: 16px;
+    text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.lich-hero h1 .gold {
+    color: var(--gold);
+}
+
+.lich-hero-desc {
+    font-size: 18px;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto 32px;
+    line-height: 1.7;
+}
+
+.lich-hero-cta {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Calendar Types Section */
+.lich-types {
+    padding: 80px 0;
+    background: var(--bg-light);
+}
+
+.lich-types-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.lich-type-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    position: relative;
+}
+
+.lich-type-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.lich-type-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--gold));
+}
+
+.lich-type-img {
+    height: 250px;
+    overflow: hidden;
+}
+
+.lich-type-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.lich-type-card:hover .lich-type-img img {
+    transform: scale(1.1);
+}
+
+.lich-type-body {
+    padding: 28px;
+}
+
+.lich-type-body h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+    color: var(--primary);
+}
+
+.lich-type-body p {
+    font-size: 14px;
+    color: var(--text-light);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.lich-type-price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.lich-type-price .from {
+    font-size: 13px;
+    color: var(--text-light);
+}
+
+.lich-type-price .price {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.lich-type-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.lich-type-features span {
+    background: var(--bg-light);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    color: var(--text-medium);
+}
+
+/* Calendar Gallery */
+.lich-gallery {
+    padding: 80px 0;
+}
+
+.gallery-filters {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.gallery-filter {
+    padding: 10px 24px;
+    border: 2px solid var(--border-color);
+    background: white;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.gallery-filter:hover,
+.gallery-filter.active {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: white;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-item-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    opacity: 0;
+    transition: var(--transition);
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+}
+
+.gallery-item:hover .gallery-item-overlay {
+    opacity: 1;
+}
+
+.gallery-item-info h4 {
+    color: white;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.gallery-item-info span {
+    color: var(--gold);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Custom Design Section */
+.lich-custom {
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    position: relative;
+}
+
+.lich-custom::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: radial-gradient(rgba(255, 215, 0, 0.1) 1px, transparent 1px);
+    background-size: 30px 30px;
+}
+
+.lich-custom .container {
+    position: relative;
+    z-index: 1;
+}
+
+.lich-custom-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.lich-custom-content {
+    color: white;
+}
+
+.lich-custom-content h2 {
+    font-size: 40px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.lich-custom-content h2 .gold {
+    color: var(--gold);
+}
+
+.lich-custom-content p {
+    font-size: 16px;
+    opacity: 0.9;
+    margin-bottom: 30px;
+    line-height: 1.7;
+}
+
+.lich-custom-features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 30px;
+}
+
+.lich-custom-feature {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.lich-custom-feature i {
+    width: 32px;
+    height: 32px;
+    background: rgba(255, 215, 0, 0.2);
+    color: var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.lich-custom-feature span {
+    font-size: 14px;
+}
+
+.lich-custom-form {
+    background: white;
+    padding: 36px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+}
+
+.lich-custom-form h3 {
+    font-size: 24px;
+    margin-bottom: 24px;
+    text-align: center;
+    color: var(--primary);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .lich-types-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .lich-custom-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .lich-hero h1 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .lich-types-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .lich-hero-cta {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .lich-custom-features {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .lich-hero h1 {
+        font-size: 32px;
+    }
+}

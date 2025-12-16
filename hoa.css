@@ -1,0 +1,508 @@
+/* ============================
+   HOA PAGE - CUSTOM STYLES
+   ============================ */
+
+/* Hero Banner for Hoa Page */
+.hoa-hero {
+    background: linear-gradient(135deg, #4a0d0d 0%, #7a1b1b 50%, #5a1515 100%);
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hoa-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://images.unsplash.com/photo-1487530811176-3780de880c2d?w=1920&q=80') center/cover no-repeat;
+    opacity: 0.2;
+}
+
+.hoa-hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 70% 30%, rgba(255, 215, 0, 0.15), transparent 50%);
+}
+
+.hoa-hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.hoa-hero-content {
+    text-align: center;
+    color: white;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hoa-hero-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 24px;
+    background: rgba(255, 215, 0, 0.2);
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    color: var(--gold);
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.hoa-hero h1 {
+    font-size: 56px;
+    color: white;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.hoa-hero h1 .gold {
+    color: var(--gold);
+}
+
+.hoa-hero-desc {
+    font-size: 20px;
+    opacity: 0.9;
+    margin-bottom: 40px;
+    line-height: 1.7;
+}
+
+.hoa-hero-cta {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.hoa-hero-features {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+
+.hoa-hero-feature {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.hoa-hero-feature i {
+    color: var(--gold);
+    font-size: 18px;
+}
+
+.hoa-hero-feature span {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* Categories Section */
+.hoa-categories {
+    padding: 80px 0;
+    background: var(--bg-light);
+}
+
+.hoa-categories-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.hoa-category-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    position: relative;
+}
+
+.hoa-category-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.hoa-category-img {
+    height: 280px;
+    overflow: hidden;
+    position: relative;
+}
+
+.hoa-category-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.hoa-category-card:hover .hoa-category-img img {
+    transform: scale(1.1);
+}
+
+.hoa-category-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent 60%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 24px;
+}
+
+.hoa-category-overlay h3 {
+    color: white;
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.hoa-category-overlay p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 13px;
+    margin-bottom: 16px;
+}
+
+.hoa-category-overlay .btn {
+    align-self: flex-start;
+}
+
+/* Featured Flowers */
+.hoa-featured {
+    padding: 80px 0;
+}
+
+.hoa-featured-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 40px;
+}
+
+.hoa-featured-header .section-title {
+    margin-bottom: 0;
+}
+
+.hoa-tabs {
+    display: flex;
+    gap: 8px;
+}
+
+.hoa-tab {
+    padding: 10px 24px;
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 25px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.hoa-tab:hover,
+.hoa-tab.active {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: white;
+}
+
+.hoa-products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.hoa-product-card {
+    background: white;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.hoa-product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.hoa-product-img {
+    height: 280px;
+    overflow: hidden;
+    position: relative;
+}
+
+.hoa-product-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.hoa-product-card:hover .hoa-product-img img {
+    transform: scale(1.08);
+}
+
+.hoa-product-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+}
+
+.hoa-product-badge span {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.hoa-product-badge .new {
+    background: var(--primary);
+    color: white;
+}
+
+.hoa-product-badge .sale {
+    background: var(--gold);
+    color: #1a1a1a;
+}
+
+.hoa-product-wishlist {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 36px;
+    height: 36px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+    opacity: 0;
+}
+
+.hoa-product-card:hover .hoa-product-wishlist {
+    opacity: 1;
+}
+
+.hoa-product-wishlist:hover {
+    background: var(--primary);
+    color: white;
+}
+
+.hoa-product-body {
+    padding: 20px;
+}
+
+.hoa-product-body h4 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-family: var(--font-main);
+    font-weight: 600;
+}
+
+.hoa-product-body .meaning {
+    font-size: 12px;
+    color: var(--primary);
+    font-style: italic;
+    margin-bottom: 12px;
+}
+
+.hoa-product-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hoa-product-price .price {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.hoa-product-price .btn-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.hoa-product-price .btn-icon:hover {
+    background: var(--primary-dark);
+    transform: scale(1.1);
+}
+
+/* Orchid Section */
+.hoa-orchid {
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--primary-deeper) 0%, var(--primary-dark) 100%);
+    position: relative;
+}
+
+.hoa-orchid-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.hoa-orchid-content {
+    color: white;
+}
+
+.hoa-orchid-content h2 {
+    font-size: 42px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.hoa-orchid-content h2 .gold {
+    color: var(--gold);
+}
+
+.hoa-orchid-content p {
+    font-size: 16px;
+    opacity: 0.9;
+    margin-bottom: 30px;
+    line-height: 1.7;
+}
+
+.hoa-orchid-features {
+    display: grid;
+    gap: 16px;
+    margin-bottom: 30px;
+}
+
+.hoa-orchid-feature {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 16px 20px;
+    border-radius: var(--radius-md);
+}
+
+.hoa-orchid-feature i {
+    width: 40px;
+    height: 40px;
+    background: var(--gold);
+    color: #1a1a1a;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.hoa-orchid-feature span {
+    font-size: 15px;
+}
+
+.hoa-orchid-image {
+    position: relative;
+}
+
+.hoa-orchid-image img {
+    border-radius: var(--radius-lg);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.hoa-orchid-price-tag {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--gold);
+    padding: 16px 32px;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.hoa-orchid-price-tag .label {
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+.hoa-orchid-price-tag .price {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+
+    .hoa-categories-grid,
+    .hoa-products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hoa-orchid-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hoa-hero h1 {
+        font-size: 42px;
+    }
+
+    .hoa-featured-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hoa-hero-features {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .hoa-hero-cta {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hoa-tabs {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .hoa-categories-grid,
+    .hoa-products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hoa-hero h1 {
+        font-size: 32px;
+    }
+}

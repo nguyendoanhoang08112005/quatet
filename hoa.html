@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoa Tươi & Lan Hồ Điệp - Trang Trí Văn Phòng, Tặng Đối Tác | Quatet</title>
+    <meta name="description"
+        content="Hoa tươi và Lan Hồ Điệp cao cấp. Trang trí văn phòng, tặng đối tác, khai trương. Giao hàng nhanh toàn quốc.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="hoa.css">
+</head>
+
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-inner">
+            <div class="top-left">
+                <span><i class="fa-solid fa-phone"></i> Hotline: <strong>1900 xxxx</strong></span>
+                <span class="divider">|</span>
+                <span><i class="fa-brands fa-facebook"></i> Facebook</span>
+                <span class="divider">|</span>
+                <span><i class="fa-solid fa-comments"></i> Zalo: 0909 xxx xxx</span>
+            </div>
+            <div class="top-right">
+                <span><i class="fa-solid fa-truck-fast"></i> Giao hàng toàn quốc</span>
+                <span class="divider">|</span>
+                <span><i class="fa-solid fa-file-invoice"></i> Xuất hóa đơn VAT</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><i class="fa-solid fa-gift"></i></span>
+                <span class="logo-text">Quatet<span class="year">2025</span></span>
+            </a>
+            <nav class="main-nav">
+                <a href="lich.html">Lịch</a>
+                <a href="gio-qua.html">Giỏ Quà</a>
+                <a href="hoa.html" class="active">Hoa</a>
+                <a href="tiec-cuoi-nam.html">Tiệc Cuối Năm</a>
+            </nav>
+            <div class="header-actions">
+                <button class="btn btn-outline-primary btn-sm" onclick="openModal('quoteModal')">
+                    <i class="fa-solid fa-file-lines"></i> Báo giá
+                </button>
+                <a href="tel:1900xxxx" class="btn btn-primary btn-sm">
+                    <i class="fa-solid fa-phone"></i> Gọi ngay
+                </a>
+            </div>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="lich.html">Lịch</a>
+        <a href="gio-qua.html">Giỏ Quà</a>
+        <a href="hoa.html">Hoa</a>
+        <a href="tiec-cuoi-nam.html">Tiệc Cuối Năm</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hoa-hero">
+        <div class="container">
+            <div class="hoa-hero-content">
+                <div class="hoa-hero-icon">
+                    <i class="fa-solid fa-spa"></i>
+                </div>
+                <h1>Hoa Tươi <span class="gold">& Lan Hồ Điệp</span></h1>
+                <p class="hoa-hero-desc">
+                    Tô điểm không gian, gửi gắm yêu thương. Bộ sưu tập hoa tươi cao cấp
+                    và Lan Hồ Điệp sang trọng cho mọi dịp đặc biệt.
+                </p>
+                <div class="hoa-hero-cta">
+                    <a href="#products" class="btn btn-gold btn-lg">
+                        <i class="fa-solid fa-eye"></i> Xem bộ sưu tập
+                    </a>
+                    <button class="btn btn-white-outline btn-lg" onclick="openModal('quoteModal')">
+                        <i class="fa-solid fa-file-invoice"></i> Đặt hoa theo yêu cầu
+                    </button>
+                </div>
+                <div class="hoa-hero-features">
+                    <div class="hoa-hero-feature">
+                        <i class="fa-solid fa-truck-fast"></i>
+                        <span>Giao hàng 2h</span>
+                    </div>
+                    <div class="hoa-hero-feature">
+                        <i class="fa-solid fa-leaf"></i>
+                        <span>Hoa tươi 100%</span>
+                    </div>
+                    <div class="hoa-hero-feature">
+                        <i class="fa-solid fa-gift"></i>
+                        <span>Đóng gói sang trọng</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="hoa-categories">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Danh mục <span class="highlight">hoa tươi</span></h2>
+                <p class="section-subtitle">Chọn loại hoa phù hợp với nhu cầu của bạn</p>
+            </div>
+
+            <div class="hoa-categories-grid">
+                <div class="hoa-category-card">
+                    <div class="hoa-category-img">
+                        <img src="https://images.unsplash.com/photo-1487530811176-3780de880c2d?w=500&h=400&fit=crop"
+                            alt="Lan Hồ Điệp">
+                        <div class="hoa-category-overlay">
+                            <h3>Lan Hồ Điệp</h3>
+                            <p>Sang trọng, phú quý, bền đẹp lâu</p>
+                            <a href="#orchid" class="btn btn-gold btn-sm">Xem mẫu</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hoa-category-card">
+                    <div class="hoa-category-img">
+                        <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=500&h=400&fit=crop"
+                            alt="Hoa Hồng">
+                        <div class="hoa-category-overlay">
+                            <h3>Hoa Hồng</h3>
+                            <p>Tình yêu, tri ân, lãng mạn</p>
+                            <a href="#products" class="btn btn-gold btn-sm">Xem mẫu</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hoa-category-card">
+                    <div class="hoa-category-img">
+                        <img src="https://images.unsplash.com/photo-1518882605630-8ebddff0e504?w=500&h=400&fit=crop"
+                            alt="Hoa Cúc">
+                        <div class="hoa-category-overlay">
+                            <h3>Hoa Cúc</h3>
+                            <p>Thanh cao, trường thọ, may mắn</p>
+                            <a href="#products" class="btn btn-gold btn-sm">Xem mẫu</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hoa-category-card">
+                    <div class="hoa-category-img">
+                        <img src="https://images.unsplash.com/photo-1455659817273-f96807779a8a?w=500&h=400&fit=crop"
+                            alt="Hoa Lily">
+                        <div class="hoa-category-overlay">
+                            <h3>Hoa Lily</h3>
+                            <p>Thuần khiết, tao nhã, quý phái</p>
+                            <a href="#products" class="btn btn-gold btn-sm">Xem mẫu</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section id="products" class="hoa-featured">
+        <div class="container">
+            <div class="hoa-featured-header">
+                <h2 class="section-title">Sản phẩm <span class="highlight">nổi bật</span></h2>
+                <div class="hoa-tabs">
+                    <button class="hoa-tab active">Tất cả</button>
+                    <button class="hoa-tab">Bó hoa</button>
+                    <button class="hoa-tab">Giỏ hoa</button>
+                    <button class="hoa-tab">Hộp hoa</button>
+                    <button class="hoa-tab">Lẵng hoa</button>
+                </div>
+            </div>
+
+            <div class="hoa-products-grid">
+                <!-- Product 1 -->
+                <div class="hoa-product-card">
+                    <div class="hoa-product-img">
+                        <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=400&h=400&fit=crop"
+                            alt="Bó hoa 1">
+                        <div class="hoa-product-badge">
+                            <span class="new">New</span>
+                        </div>
+                        <div class="hoa-product-wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="hoa-product-body">
+                        <h4>Bó Hồng Ecuador</h4>
+                        <p class="meaning">"Tình yêu vĩnh cửu"</p>
+                        <div class="hoa-product-price">
+                            <span class="price">1.500.000đ</span>
+                            <button class="btn-icon"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="hoa-product-card">
+                    <div class="hoa-product-img">
+                        <img src="https://images.unsplash.com/photo-1518882605630-8ebddff0e504?w=400&h=400&fit=crop"
+                            alt="Giỏ hoa 1">
+                        <div class="hoa-product-badge">
+                            <span class="sale">-20%</span>
+                        </div>
+                        <div class="hoa-product-wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="hoa-product-body">
+                        <h4>Giỏ Hoa Thanh Lịch</h4>
+                        <p class="meaning">"Thành công rực rỡ"</p>
+                        <div class="hoa-product-price">
+                            <span class="price">890.000đ</span>
+                            <button class="btn-icon"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="hoa-product-card">
+                    <div class="hoa-product-img">
+                        <img src="https://images.unsplash.com/photo-1455659817273-f96807779a8a?w=400&h=400&fit=crop"
+                            alt="Hộp hoa 1">
+                        <div class="hoa-product-wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="hoa-product-body">
+                        <h4>Hộp Lily Tinh Khôi</h4>
+                        <p class="meaning">"Thuần khiết, thanh cao"</p>
+                        <div class="hoa-product-price">
+                            <span class="price">1.200.000đ</span>
+                            <button class="btn-icon"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="hoa-product-card">
+                    <div class="hoa-product-img">
+                        <img src="https://images.unsplash.com/photo-1487530811176-3780de880c2d?w=400&h=400&fit=crop"
+                            alt="Lan Hồ Điệp">
+                        <div class="hoa-product-badge">
+                            <span class="new">Best</span>
+                        </div>
+                        <div class="hoa-product-wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="hoa-product-body">
+                        <h4>Lan Hồ Điệp Trắng</h4>
+                        <p class="meaning">"Phú quý, thịnh vượng"</p>
+                        <div class="hoa-product-price">
+                            <span class="price">2.500.000đ</span>
+                            <button class="btn-icon"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="hoa-product-card">
+                    <div class="hoa-product-img">
+                        <img src="https://images.unsplash.com/photo-1561181286-d3fee7d55364?w=400&h=400&fit=crop"
+                            alt="Lẵng hoa 1">
+                        <div class="hoa-product-wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="hoa-product-body">
+                        <h4>Lẵng Hoa Khai Trương</h4>
+                        <p class="meaning">"Tấn tài, tấn lộc"</p>
+                        <div class="hoa-product-price">
+                            <span class="price">1.800.000đ</span>
+                            <button class="btn-icon"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="hoa-product-card">
+                    <div class="hoa-product-img">
+                        <img src="https://images.unsplash.com/photo-1508610048659-a06b669e3321?w=400&h=400&fit=crop"
+                            alt="Bó hoa 2">
+                        <div class="hoa-product-badge">
+                            <span class="sale">Hot</span>
+                        </div>
+                        <div class="hoa-product-wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="hoa-product-body">
+                        <h4>Bó Tulip Hà Lan</h4>
+                        <p class="meaning">"Hạnh phúc, thịnh vượng"</p>
+                        <div class="hoa-product-price">
+                            <span class="price">1.350.000đ</span>
+                            <button class="btn-icon"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="hoa-product-card">
+                    <div class="hoa-product-img">
+                        <img src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?w=400&h=400&fit=crop"
+                            alt="Giỏ hoa 2">
+                        <div class="hoa-product-wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="hoa-product-body">
+                        <h4>Giỏ Hoa Văn Phòng</h4>
+                        <p class="meaning">"Bình an, thuận lợi"</p>
+                        <div class="hoa-product-price">
+                            <span class="price">750.000đ</span>
+                            <button class="btn-icon"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="hoa-product-card">
+                    <div class="hoa-product-img">
+                        <img src="https://images.unsplash.com/photo-1563241527-3004b7be0ffd?w=400&h=400&fit=crop"
+                            alt="Hộp hoa 2">
+                        <div class="hoa-product-wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                    </div>
+                    <div class="hoa-product-body">
+                        <h4>Hộp Hoa Cảm Ơn</h4>
+                        <p class="meaning">"Tri ân, biết ơn"</p>
+                        <div class="hoa-product-price">
+                            <span class="price">980.000đ</span>
+                            <button class="btn-icon"><i class="fa-solid fa-cart-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Orchid Section -->
+    <section id="orchid" class="hoa-orchid">
+        <div class="container">
+            <div class="hoa-orchid-grid">
+                <div class="hoa-orchid-content">
+                    <h2>Lan Hồ Điệp <span class="gold">Cao Cấp</span></h2>
+                    <p>Chậu Lan Hồ Điệp cao cấp, được tuyển chọn kỹ lưỡng từ những nhà vườn uy tín.
+                        Biểu tượng của sự phú quý, thịnh vượng - món quà hoàn hảo cho dịp Tết.</p>
+                    <div class="hoa-orchid-features">
+                        <div class="hoa-orchid-feature">
+                            <i class="fa-solid fa-seedling"></i>
+                            <span>Cây khỏe, hoa đẹp, nở lâu 2-3 tháng</span>
+                        </div>
+                        <div class="hoa-orchid-feature">
+                            <i class="fa-solid fa-palette"></i>
+                            <span>Đa dạng màu sắc: trắng, tím, vàng, hồng</span>
+                        </div>
+                        <div class="hoa-orchid-feature">
+                            <i class="fa-solid fa-medal"></i>
+                            <span>Chậu gốm cao cấp, thiết kế sang trọng</span>
+                        </div>
+                        <div class="hoa-orchid-feature">
+                            <i class="fa-solid fa-truck"></i>
+                            <span>Giao hàng cẩn thận, bảo hành cây</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-gold btn-lg" onclick="openModal('quoteModal')">
+                        <i class="fa-solid fa-file-invoice"></i> Đặt hàng sỉ cho doanh nghiệp
+                    </button>
+                </div>
+                <div class="hoa-orchid-image">
+                    <img src="https://images.unsplash.com/photo-1487530811176-3780de880c2d?w=600&h=500&fit=crop"
+                        alt="Lan Hồ Điệp">
+                    <div class="hoa-orchid-price-tag">
+                        <span class="label">Từ</span>
+                        <span class="price">1.500.000đ</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Cần tư vấn về hoa cho sự kiện?</h2>
+                <p>Liên hệ ngay để được hỗ trợ chọn hoa phù hợp và nhận ưu đãi đặc biệt</p>
+                <div class="cta-buttons">
+                    <a href="tel:1900xxxx" class="btn btn-white btn-lg"><i class="fa-solid fa-phone"></i> Gọi: 1900
+                        xxxx</a>
+                    <button class="btn btn-gold btn-lg" onclick="openModal('quoteModal')">
+                        <i class="fa-solid fa-file-invoice"></i> Nhận báo giá
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <span class="logo-icon"><i class="fa-solid fa-gift"></i></span>
+                        <span class="logo-text">Quatet<span class="year">2025</span></span>
+                    </div>
+                    <p>Giải pháp quà tặng & sự kiện cuối năm trọn gói cho cá nhân và doanh nghiệp.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Sản phẩm</h4>
+                    <ul>
+                        <li><a href="lich.html">Lịch in theo yêu cầu</a></li>
+                        <li><a href="gio-qua.html">Giỏ quà Tết</a></li>
+                        <li><a href="hoa.html">Hoa tươi & Lan</a></li>
+                        <li><a href="tiec-cuoi-nam.html">Party setup</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Hỗ trợ</h4>
+                    <ul>
+                        <li><a href="#">Hướng dẫn đặt hàng</a></li>
+                        <li><a href="#">Chính sách giao hàng</a></li>
+                        <li><a href="#">Chính sách đổi trả</a></li>
+                        <li><a href="#">Câu hỏi thường gặp</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Liên hệ</h4>
+                    <ul class="footer-contact">
+                        <li><i class="fa-solid fa-phone"></i> 1900 xxxx</li>
+                        <li><i class="fa-solid fa-envelope"></i> hello@quatet.vn</li>
+                        <li><i class="fa-solid fa-location-dot"></i> 123 Nguyễn Huệ, Q.1, TP.HCM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Quatet. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            document.getElementById('mobileMenu').classList.toggle('active');
+        }
+
+        function openModal(modalId) {
+            alert('Chức năng báo giá sẽ được mở - Modal ID: ' + modalId);
+        }
+    </script>
+
+</body>
+
+</html>
