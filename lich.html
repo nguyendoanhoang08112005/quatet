@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="lich.css">
+    <script src="lich.js"></script>
 </head>
 
 <body>
@@ -87,6 +88,28 @@
                     Dịch vụ in lịch độc quyền cho doanh nghiệp. Thiết kế riêng, in logo, slogan,
                     hình ảnh theo yêu cầu. Chất lượng cao, giao hàng nhanh.
                 </p>
+                <!-- Countdown Timer -->
+                <div class="countdown-box">
+                    <p class="countdown-text">🎉 Ưu đãi chiết khấu 15% đặt in sớm chỉ còn:</p>
+                    <div id="countdown" class="countdown">
+                        <div class="countdown-item">
+                            <span id="days" class="countdown-number"></span>
+                            <span class="countdown-label">Ngày</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span id="hours" class="countdown-number"></span>
+                            <span class="countdown-label">Giờ</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span id="minutes" class="countdown-number"></span>
+                            <span class="countdown-label">Phút</span>
+                        </div>
+                        <div class="countdown-item">
+                            <span id="seconds" class="countdown-number"></span>
+                            <span class="countdown-label">Giây</span>
+                        </div>
+                    </div>
+                </div>
                 <div class="lich-hero-cta">
                     <button class="btn btn-gold btn-lg" onclick="openModal('quoteModal')">
                         <i class="fa-solid fa-file-invoice"></i> Nhận báo giá ngay
@@ -111,8 +134,7 @@
                 <!-- Type 1 -->
                 <div class="lich-type-card">
                     <div class="lich-type-img">
-                        <img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=600&h=400&fit=crop"
-                            alt="Lịch để bàn">
+                        <img src="images/lich_de_ban_2025_1765853467744.png" alt="Lịch để bàn Tết 2025">
                     </div>
                     <div class="lich-type-body">
                         <h3>Lịch Để Bàn</h3>
@@ -127,6 +149,9 @@
                             <span>In offset</span>
                             <span>Couche 300gsm</span>
                         </div>
+                        <button class="btn btn-secondary btn-sm btn-preview" onclick="openPreview('desk')">
+                            <i class="fa-solid fa-search"></i> Xem chi tiết ruột lịch
+                        </button>
                         <button class="btn btn-primary btn-block" onclick="openModal('quoteModal')">
                             Báo giá ngay
                         </button>
@@ -136,8 +161,7 @@
                 <!-- Type 2 -->
                 <div class="lich-type-card">
                     <div class="lich-type-img">
-                        <img src="https://images.unsplash.com/photo-1435527173128-983b87201f4d?w=600&h=400&fit=crop"
-                            alt="Lịch treo tường">
+                        <img src="images/lich_treo_tuong_2025_1765853491261.png" alt="Lịch treo tường Tết 2025">
                     </div>
                     <div class="lich-type-body">
                         <h3>Lịch Treo Tường</h3>
@@ -151,6 +175,9 @@
                             <span>Khổ A3/A2</span>
                             <span>Giấy mỹ thuật</span>
                         </div>
+                        <button class="btn btn-secondary btn-sm btn-preview" onclick="openPreview('wall')">
+                            <i class="fa-solid fa-search"></i> Xem chi tiết ruột lịch
+                        </button>
                         <button class="btn btn-primary btn-block" onclick="openModal('quoteModal')">
                             Báo giá ngay
                         </button>
@@ -160,8 +187,7 @@
                 <!-- Type 3 -->
                 <div class="lich-type-card">
                     <div class="lich-type-img">
-                        <img src="https://images.unsplash.com/photo-1607344645866-009c320b63e0?w=600&h=400&fit=crop"
-                            alt="Lịch bloc">
+                        <img src="images/lich_bloc_2025_1765853520491.png" alt="Lịch bloc Tết 2025">
                     </div>
                     <div class="lich-type-body">
                         <h3>Lịch Bloc</h3>
@@ -175,9 +201,80 @@
                             <span>365 tờ</span>
                             <span>In logo</span>
                         </div>
+                        <button class="btn btn-secondary btn-sm btn-preview" onclick="openPreview('bloc')">
+                            <i class="fa-solid fa-search"></i> Xem chi tiết ruột lịch
+                        </button>
                         <button class="btn btn-primary btn-block" onclick="openModal('quoteModal')">
                             Báo giá ngay
                         </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Badges Section -->
+    <section class="trust-badges">
+        <div class="container">
+            <h3 class="trust-title">🔒 Cam Kết Chất Lượng Từ Quatet</h3>
+            <div class="trust-badges-grid">
+                <div class="trust-badge">
+                    <div class="trust-icon">
+                        <i class="fa-solid fa-palette"></i>
+                    </div>
+                    <h4>Cam Kết Đúng Màu</h4>
+                    <p>100% trùng màu thiết kế đã duyệt. Không sai lệch màu sắc.</p>
+                </div>
+                <div class="trust-badge">
+                    <div class="trust-icon">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h4>Bảo Hành 1 Đổi 1</h4>
+                    <p>Nếu lỗi in ấn, rách, vỡ góc - Chúng tôi đổi mới 100%.</p>
+                </div>
+                <div class="trust-badge">
+                    <div class="trust-icon">
+                        <i class="fa-solid fa-truck-fast"></i>
+                    </div>
+                    <h4>Giao Đúng Hẹn</h4>
+                    <p>Phạt trễ hẹn - Bồi thường 10% giá trị đơn hàng.</p>
+                </div>
+                <div class="trust-badge">
+                    <div class="trust-icon">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <h4>Hỗ Trợ 24/7</h4>
+                    <p>Tư vấn miễn phí, giải đáp mọi thắc mắc ngay lập tức.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="social-proof">
+        <div class="container">
+            <div class="social-proof-content">
+                <h3>Được tin chọn bởi <span class="highlight">1000+</span> doanh nghiệp trên cả nước</h3>
+                <div class="social-proof-stats">
+                    <div class="stat-item">
+                        <i class="fa-solid fa-building"></i>
+                        <span class="stat-number">1000+</span>
+                        <span class="stat-label">Doanh nghiệp</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fa-solid fa-calendar-check"></i>
+                        <span class="stat-number">50,000+</span>
+                        <span class="stat-label">Lịch đã in</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fa-solid fa-star"></i>
+                        <span class="stat-number">4.9/5</span>
+                        <span class="stat-label">Đánh giá</span>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fa-solid fa-clock"></i>
+                        <span class="stat-number">24h</span>
+                        <span class="stat-label">Giao mẫu</span>
                     </div>
                 </div>
             </div>
@@ -201,8 +298,7 @@
 
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=400&h=400&fit=crop"
-                        alt="Mẫu lịch 1">
+                    <img src="images/gallery_lich_1_1765857724406.png" alt="Mẫu lịch 1">
                     <div class="gallery-item-overlay">
                         <div class="gallery-item-info">
                             <h4>Lịch Phú Quý</h4>
@@ -211,8 +307,7 @@
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1435527173128-983b87201f4d?w=400&h=400&fit=crop"
-                        alt="Mẫu lịch 2">
+                    <img src="images/gallery_lich_2_1765857853439.png" alt="Mẫu lịch 2">
                     <div class="gallery-item-overlay">
                         <div class="gallery-item-info">
                             <h4>Lịch Thịnh Vượng</h4>
@@ -221,8 +316,7 @@
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1607344645866-009c320b63e0?w=400&h=400&fit=crop"
-                        alt="Mẫu lịch 3">
+                    <img src="images/gallery_lich_3_1765857964418.png" alt="Mẫu lịch 3">
                     <div class="gallery-item-overlay">
                         <div class="gallery-item-info">
                             <h4>Lịch An Khang</h4>
@@ -231,8 +325,7 @@
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=400&h=400&fit=crop"
-                        alt="Mẫu lịch 4">
+                    <img src="images/gallery_lich_4_1765858018421.png" alt="Mẫu lịch 4">
                     <div class="gallery-item-overlay">
                         <div class="gallery-item-info">
                             <h4>Lịch Tài Lộc</h4>
@@ -241,8 +334,7 @@
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=400&h=400&fit=crop"
-                        alt="Mẫu lịch 5">
+                    <img src="images/gallery_lich_5_1765858076363.png" alt="Mẫu lịch 5">
                     <div class="gallery-item-overlay">
                         <div class="gallery-item-info">
                             <h4>Lịch Phong Thủy</h4>
@@ -251,8 +343,7 @@
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=400&fit=crop"
-                        alt="Mẫu lịch 6">
+                    <img src="images/gallery_lich_6_1765858106655.png" alt="Mẫu lịch 6">
                     <div class="gallery-item-overlay">
                         <div class="gallery-item-info">
                             <h4>Lịch Vạn Sự</h4>
@@ -261,8 +352,7 @@
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=400&h=400&fit=crop"
-                        alt="Mẫu lịch 7">
+                    <img src="images/gallery_lich_7_1765858143294.png" alt="Mẫu lịch 7">
                     <div class="gallery-item-overlay">
                         <div class="gallery-item-info">
                             <h4>Lịch Như Ý</h4>
@@ -271,8 +361,7 @@
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1531973576160-7125cd663d86?w=400&h=400&fit=crop"
-                        alt="Mẫu lịch 8">
+                    <img src="images/gallery_lich_8_1765858187729.png" alt="Mẫu lịch 8">
                     <div class="gallery-item-overlay">
                         <div class="gallery-item-info">
                             <h4>Lịch Hanh Thông</h4>
@@ -421,15 +510,133 @@
         </div>
     </footer>
 
-    <script>
-        function toggleMobileMenu() {
-            document.getElementById('mobileMenu').classList.toggle('active');
-        }
+    <!-- Preview Modal - Lịch Để Bàn -->
+    <div id="previewModalDesk" class="preview-modal">
+        <div class="preview-modal-content">
+            <span class="preview-close" onclick="closePreview('desk')">&times;</span>
+            <h3>Lịch Để Bàn - Xem Trước Ruột Lịch</h3>
 
-        function openModal(modalId) {
-            alert('Chức năng báo giá sẽ được mở - Modal ID: ' + modalId);
-        }
-    </script>
+            <div class="preview-image">
+                <img src="images/calendar_interior_preview_1765853549972.png" alt="Ruột lịch chi tiết">
+            </div>
+            <p class="preview-desc">Ruột lịch bao gồm: Ngày dương lịch, âm lịch, ngày hoàng đạo, can chi và các thông
+                tin phong thuỷ đầy đủ.</p>
+
+            <div class="modal-tech-specs">
+                <h4>📑 Thông Số Kỹ Thuật - Lịch Để Bàn</h4>
+                <div class="tech-specs">
+                    <div class="tech-spec-item">
+                        <i class="fa-solid fa-file"></i>
+                        <div>
+                            <strong>Định lượng giấy:</strong>
+                            <span>Ruột C150gsm, Bìa C300gsm</span>
+                        </div>
+                    </div>
+                    <div class="tech-spec-item">
+                        <i class="fa-solid fa-ruler-combined"></i>
+                        <div>
+                            <strong>Kích thước:</strong>
+                            <span>20x15cm (khi gấp), 13 tờ</span>
+                        </div>
+                    </div>
+                    <div class="tech-spec-item">
+                        <i class="fa-solid fa-print"></i>
+                        <div>
+                            <strong>Công nghệ in:</strong>
+                            <span>In Offset 4 màu CMYK, Ép kim logo</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Preview Modal - Lịch Treo Tường -->
+    <div id="previewModalWall" class="preview-modal">
+        <div class="preview-modal-content">
+            <span class="preview-close" onclick="closePreview('wall')">&times;</span>
+            <h3>Lịch Treo Tường - Xem Trước Ruột Lịch</h3>
+
+            <div class="preview-image">
+                <img src="images/calendar_interior_preview_1765853549972.png" alt="Ruột lịch chi tiết">
+            </div>
+            <p class="preview-desc">Ruột lịch bao gồm: Ngày dương lịch, âm lịch, ngày hoàng đạo, can chi và các thông
+                tin phong thuỷ đầy đủ.</p>
+
+            <div class="modal-tech-specs">
+                <h4>📑 Thông Số Kỹ Thuật - Lịch Treo Tường</h4>
+                <div class="tech-specs">
+                    <div class="tech-spec-item">
+                        <i class="fa-solid fa-file"></i>
+                        <div>
+                            <strong>Định lượng giấy:</strong>
+                            <span>Giấy Mỹ Thuật 230gsm</span>
+                        </div>
+                    </div>
+                    <div class="tech-spec-item">
+                        <i class="fa-solid fa-ruler-combined"></i>
+                        <div>
+                            <strong>Kích thước:</strong>
+                            <span>Khổ A2 (40x60cm) hoặc A3 (30x42cm), 7-12 tờ</span>
+                        </div>
+                    </div>
+                    <div class="tech-spec-item">
+                        <i class="fa-solid fa-print"></i>
+                        <div>
+                            <strong>Công nghệ in:</strong>
+                            <span>In Offset 4 màu, Phủ Anke bóng/mờ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Preview Modal - Lịch Bloc -->
+    <div id="previewModalBloc" class="preview-modal">
+        <div class="preview-modal-content">
+            <span class="preview-close" onclick="closePreview('bloc')">&times;</span>
+            <h3>Lịch Bloc - Xem Trước Ruột Lịch</h3>
+
+            <div class="preview-image">
+                <img src="images/calendar_interior_preview_1765853549972.png" alt="Ruột lịch chi tiết">
+            </div>
+            <p class="preview-desc">Ruột lịch bao gồm: Ngày dương lịch, âm lịch, ngày hoàng đạo, can chi và các thông
+                tin phong thuỷ đầy đủ.</p>
+
+            <div class="modal-tech-specs">
+                <h4>📑 Thông Số Kỹ Thuật - Lịch Bloc</h4>
+                <div class="tech-specs">
+                    <div class="tech-spec-item">
+                        <i class="fa-solid fa-file"></i>
+                        <div>
+                            <strong>Định lượng giấy:</strong>
+                            <span>Tờ lịch Couche 80gsm, 365 tờ</span>
+                        </div>
+                    </div>
+                    <div class="tech-spec-item">
+                        <i class="fa-solid fa-ruler-combined"></i>
+                        <div>
+                            <strong>Kích thước:</strong>
+                            <span>Tờ 10x14cm, Đế gỗ/nhựa 12x16cm</span>
+                        </div>
+                    </div>
+                    <div class="tech-spec-item">
+                        <i class="fa-solid fa-weight-hanging"></i>
+                        <div>
+                            <strong>Trọng lượng:</strong>
+                            <span>~0.5kg/bộ (quan trọng để tính phí ship)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Falling Flowers -->
+    <div id="falling-flowers"></div>
+
+
 
 </body>
 
