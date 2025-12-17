@@ -263,6 +263,23 @@
     font-weight: 600;
 }
 
+/* Gallery Filter Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.gallery-item {
+    transition: all 0.3s ease;
+}
+
 /* Custom Design Section */
 .lich-custom {
     padding: 80px 0;

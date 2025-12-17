@@ -97,7 +97,7 @@
         </div>
     </section>
 
-    <!-- Calendar Types Section -->
+    <!-- Calendar Types Section  -->
     <section class="lich-types">
         <div class="container">
             <div class="section-header">
@@ -190,17 +190,18 @@
             </div>
 
             <div class="gallery-filters">
-                <button class="gallery-filter active">Tất cả</button>
-                <button class="gallery-filter">Lịch để bàn</button>
-                <button class="gallery-filter">Lịch treo tường</button>
-                <button class="gallery-filter">Lịch bloc</button>
-                <button class="gallery-filter">Lịch gỗ</button>
+                <button class="gallery-filter active" data-filter="all">Tất cả</button>
+                <button class="gallery-filter" data-filter="de-ban">Lịch để bàn</button>
+                <button class="gallery-filter" data-filter="treo-tuong">Lịch treo tường</button>
+                <button class="gallery-filter" data-filter="bloc">Lịch bloc</button>
+                <button class="gallery-filter" data-filter="go">Lịch gỗ</button>
             </div>
 
             <div class="gallery-grid">
-                <div class="gallery-item">
+                <!-- Lịch để bàn -->
+                <div class="gallery-item" data-category="de-ban">
                     <img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=400&h=400&fit=crop"
-                        alt="Mẫu lịch 1">
+                        alt="Lịch để bàn - Phú Quý">
                     <div class="gallery-item-overlay">
                         <div class="gallery-item-info">
                             <h4>Lịch Phú Quý</h4>
@@ -208,29 +209,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1435527173128-983b87201f4d?w=400&h=400&fit=crop"
-                        alt="Mẫu lịch 2">
-                    <div class="gallery-item-overlay">
-                        <div class="gallery-item-info">
-                            <h4>Lịch Thịnh Vượng</h4>
-                            <span>Từ 55.000đ</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1607344645866-009c320b63e0?w=400&h=400&fit=crop"
-                        alt="Mẫu lịch 3">
-                    <div class="gallery-item-overlay">
-                        <div class="gallery-item-info">
-                            <h4>Lịch An Khang</h4>
-                            <span>Từ 95.000đ</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="gallery-item">
+                <div class="gallery-item" data-category="de-ban">
                     <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=400&h=400&fit=crop"
-                        alt="Mẫu lịch 4">
+                        alt="Lịch để bàn - Tài Lộc">
                     <div class="gallery-item-overlay">
                         <div class="gallery-item-info">
                             <h4>Lịch Tài Lộc</h4>
@@ -238,19 +219,20 @@
                         </div>
                     </div>
                 </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=400&h=400&fit=crop"
-                        alt="Mẫu lịch 5">
+                <!-- Lịch treo tường -->
+                <div class="gallery-item" data-category="treo-tuong">
+                    <img src="https://images.unsplash.com/photo-1435527173128-983b87201f4d?w=400&h=400&fit=crop"
+                        alt="Lịch treo tường - Thịnh Vượng">
                     <div class="gallery-item-overlay">
                         <div class="gallery-item-info">
-                            <h4>Lịch Phong Thủy</h4>
-                            <span>Từ 120.000đ</span>
+                            <h4>Lịch Thịnh Vượng</h4>
+                            <span>Từ 55.000đ</span>
                         </div>
                     </div>
                 </div>
-                <div class="gallery-item">
+                <div class="gallery-item" data-category="treo-tuong">
                     <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=400&fit=crop"
-                        alt="Mẫu lịch 6">
+                        alt="Lịch treo tường - Vạn Sự">
                     <div class="gallery-item-overlay">
                         <div class="gallery-item-info">
                             <h4>Lịch Vạn Sự</h4>
@@ -258,23 +240,45 @@
                         </div>
                     </div>
                 </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=400&h=400&fit=crop"
-                        alt="Mẫu lịch 7">
+                <!-- Lịch bloc -->
+                <div class="gallery-item" data-category="bloc">
+                    <img src="https://images.unsplash.com/photo-1607344645866-009c320b63e0?w=400&h=400&fit=crop"
+                        alt="Lịch bloc - An Khang">
                     <div class="gallery-item-overlay">
                         <div class="gallery-item-info">
-                            <h4>Lịch Như Ý</h4>
-                            <span>Từ 75.000đ</span>
+                            <h4>Lịch An Khang</h4>
+                            <span>Từ 95.000đ</span>
                         </div>
                     </div>
                 </div>
-                <div class="gallery-item">
+                <div class="gallery-item" data-category="bloc">
                     <img src="https://images.unsplash.com/photo-1531973576160-7125cd663d86?w=400&h=400&fit=crop"
-                        alt="Mẫu lịch 8">
+                        alt="Lịch bloc - Hanh Thông">
                     <div class="gallery-item-overlay">
                         <div class="gallery-item-info">
                             <h4>Lịch Hanh Thông</h4>
                             <span>Từ 85.000đ</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Lịch gỗ -->
+                <div class="gallery-item" data-category="go">
+                    <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=400&h=400&fit=crop"
+                        alt="Lịch gỗ - Phong Thủy">
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-item-info">
+                            <h4>Lịch Phong Thủy</h4>
+                            <span>Từ 120.000đ</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="go">
+                    <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=400&h=400&fit=crop"
+                        alt="Lịch gỗ - Như Ý">
+                    <div class="gallery-item-overlay">
+                        <div class="gallery-item-info">
+                            <h4>Lịch Như Ý</h4>
+                            <span>Từ 75.000đ</span>
                         </div>
                     </div>
                 </div>
@@ -427,6 +431,32 @@
         function openModal(modalId) {
             alert('Chức năng báo giá sẽ được mở - Modal ID: ' + modalId);
         }
+
+        // Gallery Filter Functionality
+        document.addEventListener('DOMContentLoaded', function () {
+            const filterButtons = document.querySelectorAll('.gallery-filter');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+
+                    const filterValue = this.getAttribute('data-filter');
+
+                    galleryItems.forEach(item => {
+                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                            item.style.display = 'block';
+                            item.style.animation = 'fadeIn 0.4s ease';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
     </script>
 
 </body>
